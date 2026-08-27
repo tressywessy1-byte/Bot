@@ -23,3 +23,6 @@ function createMyBot() {
 }
 
 createMyBot();
+// This tiny web server keeps Render's free tier happy!
+const http = require('http');
+http.createServer((req, res) => res.end('Bot is alive!')).listen(process.env.PORT || 3000);
